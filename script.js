@@ -38,36 +38,47 @@ function generatePassword() {
     while(true) {
         passwordLength = window.prompt("How many numbers?");
         if (isNaN(passwordLength)) {
-            alert("Not a number!")
+            alert("Not a number!");
         } else if (passwordLength < 8 || passwordLength > 128) {
-            alert("Not in range!")
+            alert("Not in range!");
         } else
         break;
     }
     
     // Confirm if user wants numeric characters
+    var confirmNumbers = confirm("Include numbers?");
+    console.log(confirmNumbers);
+    if (confirmNumbers) {
+        selectedCharSets = selectedCharSets.concat(numericChars);
+    }
+
+    // Confirm is user wants uppercase characters
     var confirmUppercase = confirm("Include uppercase letters?");
     console.log(confirmUppercase);
-  
+    if (confirmUppercase) {
+        selectedCharSets = selectedCharSets.concat(uppercaseChars);
+      }
+    
     // Confirm if user wants lowercase characters
     var confirmLowercase = confirm("Include lowercase letters?");
     console.log(confirmLowercase);
-  
-    // Confirm is user wants uppercase characters
-    var confirmNumbers = confirm("Include numbers?");
-    console.log(confirmNumbers);
+    if (confirmLowercase) {
+        selectedCharSets = selectedCharSets.concat(lowercaseChars);
+    }
   
     // Confirm if user want special characters
     var confirmSpecial = confirm("Include special characters?");
     console.log(confirmSpecial);
+    if (confirmSpecial) {
+        selectedCharSets = selectedCharSets.concat(specialChars);
+    }
 
     // Validate user selection includes at least one character set
     if ((!confirmUppercase) && (!confirmLowercase) && (!confirmNumbers) && (!confirmSpecial)) {
         return null;
     }
-    console.log("Testing comparison operators");
-
-
+    console.log(confirmNumbers, confirmUppercase, confirmLowercase, confirmSpecial);
+    console.log(selectedCharSets);
 
     // If yes to numeric characters, add characters to new array
     // If yes to lowercase characters, add characters to new array

@@ -39,11 +39,9 @@ function generatePassword() {
         passwordLength = window.prompt("How many numbers?");
         if (isNaN(passwordLength)) {
             alert("Not a number!")
-        }
-        else if (passwordLength < 8 || passwordLength > 128) {
+        } else if (passwordLength < 8 || passwordLength > 128) {
             alert("Not in range!")
-        }
-        else
+        } else
         break;
     }
     
@@ -64,6 +62,13 @@ function generatePassword() {
     console.log(confirmSpecial);
 
     // Validate user selection includes at least one character set
+    if ((!confirmUppercase) && (!confirmLowercase) && (!confirmNumbers) && (!confirmSpecial)) {
+        return null;
+    }
+    console.log("Testing comparison operators");
+
+
+
     // If yes to numeric characters, add characters to new array
     // If yes to lowercase characters, add characters to new array
     // If yes to uppercase characters, add characters to new array

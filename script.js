@@ -46,12 +46,23 @@ function generatePassword() {
         else
         break;
     }
-
+    
+    // Confirm if user wants numeric characters
+    var confirmUppercase = confirm("Include uppercase letters?");
+    console.log(confirmUppercase);
   
-
     // Confirm if user wants lowercase characters
+    var confirmLowercase = confirm("Include lowercase letters?");
+    console.log(confirmLowercase);
+  
     // Confirm is user wants uppercase characters
+    var confirmNumbers = confirm("Include numbers?");
+    console.log(confirmNumbers);
+  
     // Confirm if user want special characters
+    var confirmSpecial = confirm("Include special characters?");
+    console.log(confirmSpecial);
+
     // Validate user selection includes at least one character set
     // If yes to numeric characters, add characters to new array
     // If yes to lowercase characters, add characters to new array

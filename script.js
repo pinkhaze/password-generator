@@ -33,24 +33,21 @@ generateBtn.addEventListener("click", writePassword);
 // TO DO:
 function generatePassword() {
     // Prompt user for password length
-    var passwordLength = window.prompt("How many numbers?");
-    //console.log(passwordLength);
-
     // Validate user input is a number
     // Validate user input is between 8 and 128 characters (inclusive)
-    // Confirm if user wants numeric characters
+    while(true) {
+        passwordLength = window.prompt("How many numbers?");
+        if (isNaN(passwordLength)) {
+            alert("Not a number!")
+        }
+        else if (passwordLength < 8 || passwordLength > 128) {
+            alert("Not in range!")
+        }
+        else
+        break;
+    }
+
   
-    var confirmUppercase = confirm("Include uppercase letters?");
-    //console.log(confirmUppercase);
-  
-    var confirmLowercase = confirm("Include lowercase letters?");
-    //console.log(confirmLowercase);
-  
-    var confirmNumbers = confirm("Include numbers?");
-    //console.log(confirmNumbers);
-  
-    var confirmSpecial = confirm("Include special characters?");
-    //console.log(confirmSpecial);
 
     // Confirm if user wants lowercase characters
     // Confirm is user wants uppercase characters

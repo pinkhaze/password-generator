@@ -20,11 +20,11 @@ generateBtn.addEventListener("click", writePassword);
 
 // TO DO:
 function generatePassword() {
-    // Declare empty arrays at beginning of function to clear out previously generated passwords
     let passwordLength; // holds user input for password length
+    let randomizedChar;  // holds a randomly generated character
+    // Declare empty arrays at beginning of function to clear out previously generated passwords
     let selectedCharSets = []; // holds user selected character set(s)
     let oneOfEach = []; // holds one character from each user selected character set
-    let randomizedChars = [];  // holds randomly generated characters
     let newPassword = []; // holds final password
     
     // Resource for while loop: https://stackoverflow.com/questions/6961095/how-can-i-continue-a-javascript-if-else-if-statement-until-i-receive-valid-inp
@@ -83,10 +83,10 @@ function generatePassword() {
     //console.log(oneOfEach);
 
     // Resource for getting a random number: https://git.bootcampcontent.com/University-of-Minnesota/UofM-VIRT-FSF-PT-04-2023-U-LOLC-ENTG/-/blob/main/03-JavaScript/01-Activities/28-Stu_Mini-Project/Main/script.js
-    // Randomly select characters from selectedCharSets array and store them in randomizedChars array; add randomizedChars array to newPassword array
+    // Generate a random character from selectedCharsArray; add random character to newPassword array
     for (var i = 0; i <passwordLength; i++) {
-        randomizedChars = selectedCharSets[Math.floor(Math.random() * selectedCharSets.length)]
-        newPassword.push(randomizedChars);
+        randomizedChar = selectedCharSets[Math.floor(Math.random() * selectedCharSets.length)]
+        newPassword.push(randomizedChar);
       }
 
     // Turn oneOfEach array into string; insert string at beginninng of newPassword array to ensure password contains at least one character from each user selected character set

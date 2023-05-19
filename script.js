@@ -49,7 +49,7 @@ function generatePassword() {
         oneOfEach.push(numericChars[Math.floor(Math.random() * numericChars.length)])
     }
 
-    // Confirm is user wants uppercase letters
+    // Confirm if user wants uppercase letters
     var confirmUppercase = confirm("Would you like to inclue uppercase letters in your password?");
     // If true, add uppercaseChars array to selectedChars array; add one random uppercase letter to oneOfEach array
     if (confirmUppercase) {
@@ -80,7 +80,7 @@ function generatePassword() {
 
     //console.log(confirmNumbers, confirmUppercase, confirmLowercase, confirmSpecial);
     //console.log(selectedCharSets);
-    console.log(oneOfEach);
+    //console.log(oneOfEach);
 
     // Resource for getting a random number: https://git.bootcampcontent.com/University-of-Minnesota/UofM-VIRT-FSF-PT-04-2023-U-LOLC-ENTG/-/blob/main/03-JavaScript/01-Activities/28-Stu_Mini-Project/Main/script.js
     // Randomly select characters from selectedCharSets array and store them in randomizedChars array; add randomizedChars array to newPassword array

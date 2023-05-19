@@ -26,8 +26,10 @@ In order to meet requirements, the deployed password generator application shoul
 
 ## Usage
 
-![screenshot-1]()
+![screenshot-1](https://github.com/pinkhaze/password-generator/assets/55771228/2307bdd6-fa12-4038-a39a-b61da38d27c8)
 
-![screenshot-2]()
+![screenshot-2](https://github.com/pinkhaze/password-generator/assets/55771228/b0ec27e2-a048-4aeb-973c-c7c7e6215408)
 
-![screenshot-3]()
+![screenshot-3](https://github.com/pinkhaze/password-generator/assets/55771228/ba34dc90-d8b3-4a70-be69-b570fdd9cc87)
+
+![screenshot-4](https://github.com/pinkhaze/password-generator/assets/55771228/6f80b2e2-15a2-4877-94a8-1006f485ae72)
